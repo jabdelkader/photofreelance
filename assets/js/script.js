@@ -1,3 +1,5 @@
+
+//menu beuger mobile
 console.log('burger');
 const menuburger = document.querySelector('.menuburger')
 const button = document.querySelector('.buttonmenu');
@@ -36,3 +38,4 @@ window.addEventListener('click', function(event) {
         modal.style.display = "none";
     }
 });
+
