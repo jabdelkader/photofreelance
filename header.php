@@ -7,9 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Space+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
+    
+
 
     <?php wp_head() ?>
     <script>
@@ -37,6 +36,6 @@
         </div>
         <?php include_once "templates_parts/menuburger.php"; ?>
         <?php include_once "templates_parts/formulaire.php"; ?>
-        
+        <?php include_once "templates_parts/lightbox.php"; ?>
     </header>
     <div class="container">

@@ -6,34 +6,46 @@ Author: jihane abdelkader
 */
 @font-face {
   font-family: "Space mono";
-  src: url("../assets/fonts/SpaceMono-Bold.ttf") format("truetype");
+  src: url("./assets/fonts/SpaceMono-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   display: swap;
 }
 @font-face {
   font-family: "Space mono";
-  src: url("../assets/fonts/SpaceMono-BoldItalic.ttf") format("truetype");
+  src: url("./assets/fonts/SpaceMono-BoldItalic.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
   display: swap;
 }
 @font-face {
   font-family: "Space mono";
-  src: url("../assets/fonts/SpaceMono-Italic.ttf") format("truetype");
+  src: url("./assets/fonts/SpaceMono-Italic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
   display: swap;
 }
 @font-face {
   font-family: "Space mono";
-  src: url("../assets/fonts/SpaceMono-Regular.ttf") format("truetype");
+  src: url("./assets/fonts/SpaceMono-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   display: swap;
 }
-
-
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Light.ttf")format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+  display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Medium.ttf")format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  display: swap;
+}
   body {
     margin: auto;
     padding: 0;
@@ -352,24 +364,79 @@ form {
   }
 
   /*-------------page accueil*-----------*/
+
   .accueil_aleatoire_photo {
     height: 103vh;
 }
 
 .photoaleatoire {
     width: 100%;
-    height: 100%;
+    height: 900px;
     object-fit: cover;
 }
 
 .photoevent {
     
     position: absolute;
-    top: 70%;
+    align-items: center;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+    z-index: 3;
 }
+
+.photo_toutephoto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 84px;
+}
+
+.photo_newunephoto img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+
+}
+
+.photo_unephoto img {
+
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.photo_newunephoto {
+  height: 41vw;
+  width: 41vw;
+}
+
+.photo_unephoto {
+  height: 41vw;
+  width: 41vw;
+}
+
+
+
+#load-more {
+  border-radius: 2px;
+  background: #D8D8D8;
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 0.5%;
+  margin-bottom: 1.5%;
+}
+
+.chargerplus {
+  display: flex;
+  justify-content: center;
+  
+}
+
 
 @media screen and (max-width: 1100px) {
   .photoevent {
@@ -478,5 +545,781 @@ form {
 }
 
 
+/*--------------------------------------------------------------Single_photo --------------------------------------------------------------*/
+.post_contant {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin: 4%;
 
+}
+
+.post_contant h1 {
+  
+font-family: Space Mono;
+font-size: 66px;
+font-style: italic;
+font-weight: 400;
+line-height: 58px;
+letter-spacing: 0em;
+text-align: left;
+
+
+}
+
+
+.post_contant p {
+  font-family: Space Mono;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  gap:20px;
+}
+
+.post_image {
+  width: 40vw;
+
+
+}
+
+.post_image img {
+  object-fit: contain;
+  width: 100%;
+  min-height: 50%;
+  max-height: 80%;
+}
+
+.post_description {
+  padding-bottom: 1%;
+  border-bottom: #000 1px solid;
+  width: 50vw;
+}
+.post_description a {
+  color: #000;
+}
+.post_separation {
+  border-bottom: #000 1px solid;
+}
+
+/* Interesse */
+
+
+
+
+.interesse {
+  margin:1% 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.photo_carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: relative;
+  gap: 20px;
+}
+
+
+.prev-btn,
+.next-btn {
+  font-size: 24px;
+  cursor: pointer;
+  color: grey;
+
+}
+
+ 
+.carousel-image:hover {
+  transform: scale(1.5);
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+.btn_interesse {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact_interesse{width: 40%;}
+.section_interesse {
+  border-bottom: 1px black solid;
+  margin:-3% 2%;
+}
+
+/* Vous aimeriez aussi */
+.section_aimerezaussi{margin: 4%;}
+.section_aimerezaussi h2{padding: 20px 0px;}
+
+.photo_aimerezaussi {
+  width: 50vw;
+  height: 41vw;
+}
+
+.photo_aimerezaussi img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.photo_aleatoire {
+  display: flex;
+  justify-content: center;
+  gap: 1%;
+}
+.photo_aimerezaussi a {
+  color: #FFFFFF;
+  font-size: 14px !important;
+}
+
+
+
+/* toutephoto */
+.btn_toutephoto {
+  height: 38px;
+  width: 214px;
+  font-family: Space Mono;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.1em;
+  text-align: center;
+ 
+}
+
+.btntoutephoto {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.btntoutephoto a {
+  padding:5px;
+  color: #000;
+}
+
+/*-------------------------------------------------------------- Media Query single_photo --------------------------------------------------------------*/
+@media screen and (max-width: 520px) {
+  .post_contant {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      /* flex-direction: column-reverse; */
+      justify-content: center;
+
+  }
+
+  .photo_carousel {
+      display: none;
+  }
+
+  .btn_interesse {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+  }
+
+  .photo_aleatoire {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .modal-content {
+      width: 98vw;
+      margin: 0px;
+      padding: 0px;
+      height: none;
+  }
+
+  
+
+  .btn_interesse p {
+      margin-left: 51px;
+  }
+
+  .photo_aimerezaussi img {
+      object-fit: cover;
+      width: 263px;
+      height: 231px;
+  }
+
+  .photo_aimerezaussi {
+      width: 263px;
+      height: 231px;
+  }
+
+  .post_image {
+      width: 75vw;
+      margin-top: 5%;
+  }
+
+  .post_description a {
+      text-decoration: none;
+      font-size: 15px;
+      color: #000;
+  }
+
+  .photo_aimerezaussi {
+      margin-bottom: 4%;
+  }
+
+  .post_description {
+      margin-right: 23%;
+  }
+
+  .section_aimerezaussi h2 {
+      text-align: center;
+
+  }
+
+  .btn_interesse button {
+      margin-right: 45%;
+  }
+
+  .accueil_aleatoire {
+      margin-top: 2%;
+  }
+}
+
+
+/*----- Filtre----- */
+.filtre label {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+.filtre {
+  display: flex;
+  justify-content: space-around;
+}
+
+.js-filter-form {
+
+  background: #FFFFFF;
+
+}
+.filtre_taxo{display: flex;}
+
+.filtre select {
+  width: 272px;
+  height: 40px;
+  border: 1px black solid;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .filtre {
+      display: flex;
+
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  .filtre select {
+      display: flex;
+      width: 190px;
+      height: 25px;
+      border: 1px black solid;
+  }
+
+  .filtre {
+      gap: 5px;
+  }
+
+  .filtre_taxo {
+      gap: 5px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .filtre {
+      display: flex;
+      flex-direction: column;
+  }
+}
+
+.modal_content {
+  width: 597px;
+  padding: 0;
+}
+
+
+ /*-------------------------------------------------------------- lightbox hover --------------------------------------------------------------*/
+
+.photo_unephoto {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo_unephoto a {
+  color: #FFFFFF;
+  font-size: 21px;
+}
+
+.photo_unephoto .fadedbox {
+  background-color: #000000;
+  position: absolute;
+  top: 3%;
+  left: 0;
+  color: #fff;
+  opacity: 0;
+  height: 40vw;
+  width: 41vw;
+}
+
+.photo_unephoto:hover .fadedbox {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.photo_unephoto .title {font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #fff;
+}
+.photo_unephoto .categorie a {font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;}
+
+.fadedbox {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.buttonlightbox {
+  border: none;
+  background-color:#fff;
+
+}
+
+.divfullscreen img {
+  cursor: pointer;
+  background-color: #000;
+}
+
+.photo_unephoto:hover .title,
+.photo_unephoto:focus .title {
+  opacity: 1;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.divoeil img {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%)
+}
+
+@media screen and (max-width: 800px) {
+
+  .photo_unephoto .fadedbox,
+  .photo_aimerezaussi .fadedbox,
+  .photo_newunephoto .fadedbox {
+      background-color: #000000;
+      position: absolute;
+      top: 7%;
+      left: 0;
+      color: #fff;
+      opacity: 0;
+      height: 51vw;
+      width: 55vw;
+  }
+
+  .photo_unephoto a,
+  .photo_aimerezaussi a,
+  .photo_newunephoto a {
+      color: #FFFFFF;
+      font-size: 14px;
+  }
+
+  .photo_unephoto p,
+  .photo_aimerezaussi p,
+  .photo_newunephoto p {
+      font-size: 14px;
+  }
+
+  .divoeil img {
+      width: 46px;
+      height: 46px;
+      position: absolute;
+      top: 37%;
+      left: 39%;
+  }
+
+  .chargerplus {
+      margin-top: 10px;
+  }
+
+  .photo_newunephoto .fadedbox {
+      background-color: #000000;
+      position: absolute;
+      top: 0%;
+      left: 0;
+      color: #fff;
+      opacity: 0;
+      height: 40vw;
+      width: 40vw;
+  }
+
+  .photo_newunephoto {
+      margin-top: 7%;
+  }
+}
+
+/*--------------------------------------------------------------  lightbox hover newunephoto --------------------------------------------------------------*/
+.photo_newunephoto {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo_newunephoto a {
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.photo_newunephoto .fadedbox {
+  background-color: #000000;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  color: #fff;
+  opacity: 0;
+  height: 41vw;
+  width: 41vw;
+}
+
+
+.photo_newunephoto:hover .fadedbox {
+  opacity: 0.5;
+  transition: 0.5s;
+
+}
+
+.photo_newunephoto .title {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.photo_newunephoto .fadedbox {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.photo_newunephoto:hover .title,
+.photo_newunephoto:focus .title {
+  opacity: 1;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*  lightbox hover aimerezaussi */
+
+.photo_aimerezaussi {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo_aimerezaussi a {
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.photo_aimerezaussi .fadedbox {
+  background-color: #000000;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  color: #fff;
+  opacity: 0;
+  height: 41vw;
+  width: 100%;
+}
+
+.photo_aimerezaussi:hover .fadedbox {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.photo_aimerezaussi .title {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.photo_aimerezaussi .fadedbox {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.photo_aimerezaussi:hover .title,
+.photo_aimerezaussi:focus .title {
+  opacity: 1;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*-------------------------------------------------------------- Lightbox --------------------------------------------------------------*/
+
+.lightbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, .8);
+  z-index: 999;
+  overflow:visible;
+  display: none;
+  justify-content: centre !important;
+  align-items: centre !important;
+}
+
+.lightbox__close {
+  background: url('./assets/images/close.png');
+  border: none;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  
+  top: 50px;
+  right: 200px;
+  cursor: pointer;
+  z-index: 10000;
+  color:white;
+}
+
+
+
+
+  .lightbox__container {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 90vh;
+  max-height: 30vh;
+  margin: 20% auto; /* Utiliser "auto" pour centrer horizontalement */
+  
+  
+   
+    
+  }
+  
+  
+
+
+.buttonlightbox {
+  Width: 35px;
+  Height: 35px;
+  background-color:black;
+  position: absolute;
+  top: 2%;
+  left: 92%;
+}
+
+.lightbox__datecateg p {
+  color: #fff;
+}
+
+.lightbox__container .fleche {
+  background-color:none;
+ 
+  position: absolute;
+  cursor: pointer;
+  color: #fefefe;
+  
+}
+
+.lightbox__container .fleche-gauche {
+  left: 18% !important;
+}
+
+.lightbox__container .fleche-droite {
+  right: 20% !important;
+}
+
+.lightbox__image {
+  width: 100%;
+  height: 400px !important;
+  max-width: 100%;
+  height: auto;
+  margin: auto; 
+  box-sizing: border-box;
+  
+}
+
+
+
+
+
+.lightbox__datecateg {
+  display: flex;
+ 
+  gap:200px;
+}
+
+
+/* -----------------------------------------Hover Button-------------------------------------------------------- */
+
+#load-more:hover {
+  background-color: blue;
+  transition: 0.3s;
+  opacity: 1;
+  z-index: 1;
+}
+
+
+
+
+#load-more {
+  position: relative;
+  color: #000;
+  padding: 10px 100px;
+}
+
+.btnhover {
+  background-color: #D8D8D8;
+  border-radius: 2px;
+  border: transparent;
+  font-family: 'space-mono';
+  font-size: 14px;
+  box-shadow: none;
+  padding:13px 15px;
+  cursor: pointer;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: .5s all ease-in-out;
+}
+
+.btnhover::before {
+  content: '';
+  position: absolute;
+  background: black;
+  width: 3px;
+  height: 38px;
+  left: 0;
+  transition: .2s all;
+  z-index: -1;
+}
+
+.btnhover:hover::before {
+  width: 100%;
+}
+
+.btnhover:hover {
+  color: #ffffff;
+}
+.post_image {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.post_image a {
+  color: #FFFFFF;
+  font-size: 21px;
+}
+
+.post_image .fadedbox {
+  background-color: #000000;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  color: #fff;
+  opacity: 0;
+  height: 50vw;
+  width: 100%;
+}
+
+.post_image:hover .fadedbox {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.post_image .title {
+  font-size: 21px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.post_image .fadedbox {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.post_image:hover .title,
+.post_image:focus .title {
+  opacity: 1;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
  

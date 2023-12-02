@@ -39,3 +39,42 @@ window.addEventListener('click', function(event) {
     }
 });
 
+//carroussel
+let currentImageIndex = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    //const currentFile = scriptData.currentFile;
+    const carouselContainer = document.querySelector('.carousel-container');
+    const carouselTrack = document.querySelector('.carousel-track');
+    const images = document.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.prev-btn');
+    const nextButton = document.querySelector('.next-btn');
+    
+ let currentIndex =  Math.floor((images.length - 11) % 16);
+    function showImage(index) {
+        for (let i = 0; i < images.length; i++) {
+            images[i].style.display = 'none';
+        }
+    
+        // Afficher uniquement l'image avec l'index spécifié
+        if (index >= 0 && index < images.length) {
+            images[index].style.display = 'block';
+        }
+    }
+
+    function goToPreviousImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    }
+
+    function goToNextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    }
+
+    // Afficher l'image correspondante à l'index actuel au chargement de la page
+    showImage(currentIndex);
+
+    // Gérer les clics sur les boutons précédent et suivant
+    prevButton.addEventListener('click', goToPreviousImage);
+    nextButton.addEventListener('click', goToNextImage);
+});
