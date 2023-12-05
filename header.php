@@ -7,9 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    
-
-
     <?php wp_head() ?>
     <script>
         $(document).ready(function () {

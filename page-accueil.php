@@ -29,12 +29,12 @@ endif;
 <div class="filtre">
     <div class="filtre_taxo">
         <div class="filtre_categ">
-        <form class="js-filter-form" method="post">
+            <form class="js-filter-form" method="post">
                 <?php
                 $terms = get_terms('categorie');
                 $select = "<div class='filtre'>";
                 $select .= "<select name='categorie' id='cat1' class='postform'>";
-                $select .= "<option value='' disabled selected style='display:none;'>CATEGORIES</option>";  // Placeholder option";
+                $select .= "<option value='' disabled selected style='display:none;'>CATEGORIES</option>";  // Placeholder option
                 foreach ($terms as $term) {
                     if ($term->count > 0) {
                         $select .= "<option value='" . $term->slug . "'>" . $term->name . "</option>";
@@ -44,40 +44,38 @@ endif;
                 echo $select;
                 ?>
             </form>
-      </div>
-
-        <div class="filtre_form">
-           <form class="js-filter-form" method="post">
-          <?php
-           $terms = get_terms('format');
-           $select = "<div class='filtre'>";
-           $select .= "<select name='format' id='format1' class='postform'>";
-           $select .= "<option value='' disabled selected style='display:none;'>FORMAT</option>";  // Placeholder option
-           foreach ($terms as $term) {
-            if ($term->count > 0) {
-                $select .= "<option value='" . $term->slug . "'>" . $term->name . "</option>";
-            }
-           }
-          $select .= "</select></div>";
-          echo $select;
-          ?>
-          </form>
         </div>
 
+        <div class="filtre_form">
+            <form class="js-filter-form" method="post">
+                <?php
+                $terms = get_terms('format');
+                $select = "<div class='filtre'>";
+                $select .= "<select name='format' id='format1' class='postform'>";
+                $select .= "<option value='' disabled selected style='display:none;'>FORMAT</option>";  // Placeholder option
+                foreach ($terms as $term) {
+                    if ($term->count > 0) {
+                        $select .= "<option value='" . $term->slug . "'>" . $term->name . "</option>";
+                    }
+                }
+                $select .= "</select></div>";
+                echo $select;
+                ?>
+            </form>
+        </div>
     </div>
-    <div class="filtre_date">
-       <form class="js-filter-form" method="post">
-    
-           <div class='filtre'>
-                <select name='date' id='date1' class='postform'>
-                  <option value='' disabled selected style='display:none;'>TRIER PAR</option> 
-                  <option value='nouveaute'>Les plus récentes</option>
-                  <option value='anciens'>Les plus anciennes</option>
-                </select>
-           </div>
-       </form>
-  </div>
 
+    <div class="filtre_date">
+        <form class="js-filter-form" method="post">
+            <div class='filtre'>
+                <select name='date' id='date1' class='postform'>
+                    <option value='' disabled selected style='display:none;'>TRIER PAR</option> 
+                    <option value='nouveaute'>Les plus récentes</option>
+                    <option value='anciens'>Les plus anciennes</option>
+                </select>
+            </div>
+        </form>
+    </div>
 </div>
 
 <div class="photo_toutephoto">

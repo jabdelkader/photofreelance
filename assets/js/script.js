@@ -78,3 +78,16 @@ document.addEventListener("DOMContentLoaded", () => {
     prevButton.addEventListener('click', goToPreviousImage);
     nextButton.addEventListener('click', goToNextImage);
 });
+
+jQuery(document).ready(function($) {
+    // Initialiser Select2
+    $('.postform').select2();
+
+    // Ajouter une classe au survol
+    $('.select2-results__option').on('mouseover', function() {
+        $(this).addClass('hover');
+    }).on('mouseout', function() {
+        $(this).removeClass('hover');
+    });
+});
+
